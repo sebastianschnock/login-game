@@ -6,6 +6,9 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('highscores');
+  this.route('login');
+  this.route('removed');
 });
 
 export default Router;
