@@ -4,6 +4,8 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'login-game',
     environment: environment,
+    contentSecurityPolicy: { 'connect-src': "'self' wss://*.firebaseio.com" },
+    firebase: 'https://login-game.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
