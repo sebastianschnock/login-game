@@ -1,0 +1,15 @@
+{{#unless session.isAuthenticated}}
+	<div class='login-signup__credentials'>
+			{{input type='text' value=username placeholder='username'}}
+			{{input type='password' value=password placeholder='password'}}
+	</div>
+{{/unless}}
+
+<div class='login-signup__actions'>
+	{{#unless session.isAuthenticated}}
+		<button {{action 'loginOrRemove'}}>Log in</button>
+		<button {{action 'signup'}}>Sign up</button>
+	{{/unless}}
+</div>
+
+{{yield}}
