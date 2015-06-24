@@ -50,7 +50,7 @@ export default Ember.Component.extend({
 		 */
 		loginOrRemove: function() {
 
-			if(Math.random() > 0.5) {
+			if(Math.random() > 0.3) {
 
 				// log the user in
 				this.send('login');
