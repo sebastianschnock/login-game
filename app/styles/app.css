@@ -42,6 +42,22 @@ body {
 
 
 /******************************
+ * Login box
+ *****************************/
+
+
+
+.login-signup__credentials {
+	margin: 0.8em 0;
+}
+
+.login-signup__errors {
+	margin: 1em 0;
+}
+
+
+
+/******************************
  * Highscores
  *****************************/
 
@@ -49,4 +65,18 @@ body {
 
 .highscores__header-user {
 	width: 60%;
+}
+
+
+
+
+
+/******************************
+ * Account removed
+ *****************************/
+
+
+
+.account-removed {
+	margin: 1em 0;
 }
