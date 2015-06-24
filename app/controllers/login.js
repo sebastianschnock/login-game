@@ -9,6 +9,9 @@ export default Ember.Controller.extend({
 		 */
 		successfulLogin: function(uid) {
 
+			// show congratulations
+			this.set('session.showCongratulations', true);
+
 			// increment login counter
 			this.store.find('user', uid).then(function(user) {
 				user.set('logins', user.get('logins') + 1);
