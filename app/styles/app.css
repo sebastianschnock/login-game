@@ -3,6 +3,50 @@
  *****************************/
 
 
+
 body {
-	max-width: 40em;
+	max-width: 30em;
+	margin: 0 2em;
+}
+
+
+
+
+
+/******************************
+ * Fonts
+ *****************************/
+
+
+
+@font-face {
+    font-family: Exo;
+    src: url('fonts/Exo-ExtraBold.otf');
+}
+
+
+
+
+
+/******************************
+ * Page template
+ *****************************/
+
+
+
+.main-header {
+	font-family: 'Exo', serif;
+}
+
+
+
+
+/******************************
+ * Highscores
+ *****************************/
+
+
+
+.highscores__header-user {
+	width: 60%;
 }
