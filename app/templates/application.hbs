@@ -18,6 +18,21 @@
 	{{/if}}
 {{else}}
 	Please {{#link-to 'login'}}log in{{/link-to}} or {{#link-to 'login'}}sign up{{/link-to}}
+
+	<div class='game-description'>
+		<h3>What is it?</h3>
+		<blockquote>
+			<p>An awesome game of login fun!</p>
+			<footer>Actually nobody</footer>
+		</blockquote>
+		<h3>How to play</h3>
+		<ol>
+			<li>sign up with username and password</li>
+			<li>log in, your login counter will increase and you will move up in the highscores list</li>
+			<li>log out</li>
+		</ol>
+		Repeat step 2 and 3 until you are on top of the highscores list! But beware: there is a chance on every login that your account gets deleted and you will have to start all over again. No risk no fun :)
+	</div>
 {{/if}}
 
 {{outlet}}
