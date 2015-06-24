@@ -13,7 +13,7 @@ Go to https://login-game.firebaseapp.com/ and play away!
 3. log out
 
 Repeat step 2 and 3 until you are on top of the highscores list!
-But beware: there is a change on every login that your account gets deleted and you will have to start all over again.
+But beware: there is a chance on every login that your account gets deleted and you will have to start all over again.
 No risk no fun :)
 
 ## How to run locally
