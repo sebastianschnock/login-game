@@ -12,4 +12,10 @@
 	{{/unless}}
 </div>
 
+{{#if error}}
+	<div class='alert alert-danger'>
+		{{errorReason}}
+	</div>
+{{/if}}
+
 {{yield}}

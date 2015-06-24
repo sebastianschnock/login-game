@@ -10,19 +10,41 @@ export default Ember.Component.extend({
 		 */
 		signup: function() {
 
-			// create a new user authentication
-			var ref = new Firebase('https://login-game.firebaseio.com');
-			ref.createUser({
-				email: this.get('email'),
-				password: this.get('password')
-			}, function(error) {
-				if (error) {
-					console.log("Error creating user:", error);
-				} else {
-					this.attrs.successfulSignup(this.get('username'), this.get('username'));
-					this.send('login');
-				}
-			}.bind(this));
+			// error handling: no user name set
+			if(this.get('username') === undefined) {
+				this.set('error', true);
+				this.set('errorReason', 'You must set a user name');
+			}
+
+			// error handling: no password set
+			else if(this.get('password') === undefined) {
+				this.set('error', true);
+				this.set('errorReason', 'You must set a password');
+			}
+
+			// all good, try to register new user
+			else {
+
+				// create a new user authentication
+				var ref = new Firebase('https://login-game.firebaseio.com');
+				ref.createUser({
+					email: this.get('email'),
+					password: this.get('password')
+				}, function(error) {
+
+					// error handling: signup failed on firebase side
+					if (error) {
+						this.set('error', true);
+						this.set('errorReason', 'User already exists');
+					}
+
+					// all good, proceed
+					else {
+						this.attrs.successfulSignup(this.get('username'), this.get('username'));
+						this.send('login');
+					}
+				}.bind(this));
+			}
 		},
 
 		/**
@@ -41,8 +63,9 @@ export default Ember.Component.extend({
 				this.attrs.successfulLogin(this.get('name'));
 			}.bind(this), function() {
 				// error
-				console.log('error on login');
-			});
+				this.set('error', true);
+				this.set('errorReason', 'Invalid user or password');
+			}.bind(this));
 		},
 
 		/**
