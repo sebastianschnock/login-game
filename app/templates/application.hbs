@@ -1,10 +1,12 @@
-<h2 id="title">Login game</h2>
+<header>
+	<h1>Login game</h1>
+</header>
 
 {{#if session.isAuthenticated}}
-	Logged in as {{session.user}}
-	<button {{action 'logout'}}>Log out</button>
+	Logged in as <em>{{session.user}}</em>
+	<a href='#' {{action 'logout'}}>(log out)</a>
 {{else}}
-	Please {{#link-to 'login'}}log in{{/link-to}}
+	Please {{#link-to 'login'}}log in{{/link-to}} or {{#link-to 'login'}}sign up{{/link-to}}
 {{/if}}
 
 {{outlet}}

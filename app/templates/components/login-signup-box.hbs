@@ -7,8 +7,8 @@
 
 <div class='login-signup__actions'>
 	{{#unless session.isAuthenticated}}
-		<button {{action 'loginOrRemove'}}>Log in</button>
-		<button {{action 'signup'}}>Sign up</button>
+		<button {{action 'loginOrRemove'}} class='btn btn-primary'>Log in</button>
+		<button {{action 'signup'}} class='btn btn-default'>Sign up</button>
 	{{/unless}}
 </div>
 
