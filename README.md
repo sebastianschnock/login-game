@@ -38,3 +38,4 @@ This is an Ember.js project that implements user authentication and authorizatio
 - [Ember Simple Auth](https://github.com/simplabs/ember-simple-auth)
 - [Firebase authentication](https://www.firebase.com/docs/web/guide/user-auth.html)
 - [Emberfire](https://github.com/firebase/emberfire)
+- [Firebase Authenticator for Ember Simple Auth](https://github.com/jamesdixon/ember-cli-simple-auth-firebase)
