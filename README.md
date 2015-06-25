@@ -2,7 +2,7 @@
 Who has the longest login streak?
 
 ## Description
-On the surface this is just a test project for an authentication flow with Ember, but it is actually an awesome game of login fun!
+On the surface this is just a test project for an authentication flow with Ember, but it is actually an awesome game of login fun! :yum:
 
 ## Live demo
 Go to https://login-game.firebaseapp.com/ and play away!
