@@ -1,7 +1,7 @@
 {{#unless session.isAuthenticated}}
 	<div class='login-signup__credentials'>
 			{{input type='text' value=username placeholder='username'}}
-			{{input type='password' value=password placeholder='password'}}
+			{{input type='password' value=password placeholder='password' enter='loginOrRemove'}}
 	</div>
 {{/unless}}
 
